@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnEquals).setOnClickListener { calc() }
         findViewById<Button>(R.id.btnCE).setOnClickListener { tvDisplay.text = "0" }
-        findViewById<Button>(R.id.btnC).setOnClickListener { tvDisplay.text = "0" }
+        findViewById<Button>(R.id.btnC).setOnClickListener { tvDisplay.text = "0"; value1 = 0.0f; pendingOp = "" }
         findViewById<Button>(R.id.btnBS).setOnClickListener { backspace() }
         findViewById<Button>(R.id.btnDot).setOnClickListener { dot() }
         findViewById<Button>(R.id.btnPlusMinus).setOnClickListener { sign() }
