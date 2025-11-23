@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout cho từng item sinh viên trong ListView -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:gravity="center_vertical">  <!-- Căn nội dung theo chiều dọc -->
+
+    <!-- ================================ -->
+    <!--    KHỐI TEXT HIỂN THỊ THÔNG TIN  -->
+    <!-- ================================ -->
+
+    <!-- Layout chứa 2 TextView (Tên + MSSV) -->
+    <!-- Dùng weight = 1 để chiếm toàn bộ không gian còn lại,
+         đẩy icon delete sang phải -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- TextView hiển thị Họ tên -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nguyễn Văn A"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"/>           <!-- Màu chữ xám đậm -->
+
+        <!-- TextView hiển thị MSSV -->
+        <TextView
+            android:id="@+id/tvMSSV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20200001"
+            android:textSize="14sp"
+            android:textColor="#666"/>           <!-- Màu xám nhạt hơn -->
+    </LinearLayout>
+
+    <!-- ================================ -->
+    <!--         ICON NÚT XÓA ITEM        -->
+    <!-- ================================ -->
+
+    <ImageView
+        android:id="@+id/imgDelete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+        <!-- Hiệu ứng ripple khi bấm vào (tùy theme Android) -->
+
+</LinearLayout>
